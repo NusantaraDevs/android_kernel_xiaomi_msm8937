@@ -865,7 +865,7 @@ static void __program_context(struct msm_iommu_drvdata *iommu_drvdata,
 	phys_addr_t pn;
 	void __iomem *base = iommu_drvdata->base;
 	void __iomem *cb_base = iommu_drvdata->cb_base;
-	unsigned int ctx = ctx_drvdata->num;
+	unsigned long int ctx = ctx_drvdata->num;
 	phys_addr_t pgtable = __pa(priv->pt.fl_table);
 
 	__reset_context(iommu_drvdata, ctx);
